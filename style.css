@@ -85,7 +85,7 @@ h1::after{
 /* garis kecil sblm nama author */
 .quote-box span::before{
     content: '';
-    width: 20px;
+    width: 15px;
     height: 2px;
     background: lightblue;
     position: absolute;
