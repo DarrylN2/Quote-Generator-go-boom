@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote generator</title>
+    <!-- Ini buat nge-link ke sheet css-nya exploding button, gw kgk ngerti apa2 cuma, copas code -->
+    <link rel="stylesheet" href="explode.css" />
+
+    <!-- Ini buat nge-link ke sheet css-nya buat general style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Ini buat nge-link ke sheet css-nya buat general style -->
+    <link rel="stylesheet" href="nextquote.css" />
+  </head>
+
+  <body>
+    <!-- kotak putih quote generator -->
+    <div class="quote-box">
+      <!-- explosion button -->
+      <button id="willDelete" class="explodingButton">Quotes?</button>
+
+      <!-- judul di kotaknya -->
+      <h1>Quotes</h1>
+
+      <!-- tulisan quote-nya -->
+      <blockquote id="js-quote">.</blockquote>
+
+      <!-- tulisan author-nya -->
+      <span id="js-author">.</span>
+
+      <!-- container buat next-quote-button -->
+      <div class="button-row">
+        <!-- idk wtf this is, gw cuma copas code -->
+        <div class="wrapper">
+          <div class="link_wrapper">
+            <a id="next-quote" href="#" onclick="getQuote(api_url);"
+              >Next Quote</a
+            >
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 268.832 268.832">
+                <path
+                  d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* ini sebagian javascriptnya*/
+
+      const api_url = "https://api.quotable.io/random";
+      const quote = document.getElementById("js-quote");
+      const author = document.getElementById("js-author");
+      const nextQuote = document.getElementById("next-quote");
+
+      async function getQuote(url) {
+        const response = await fetch(url);
+        var data = await response.json();
+        quote.innerHTML = data.content;
+        author.innerHTML = data.author;
+      }
+      getQuote(api_url);
+    </script>
+
+    <!-- ini juga javascript buat exploding buttonnya, gw kgk ngerti apa2, gw cuma copas code -->
+    <script src="explode.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+/* format buat semua element */
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+/* background colornya */
+body{
+    background-color:lightcoral ;
+}
+
+/* white box buat quotes-nya */
+.quote-box{
+    max-width: 540px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 8% auto;
+    padding: 30px 20px 10px 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+/* format buat exploding buttonnya */
+.explodingButton{
+    z-index: 1;
+    position:absolute;
+    width: 105%;
+    height: 105%;
+    background-color: #255ff4;
+    border-radius: 10px;
+    top: -2.5%;
+    left: -2.5%;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* format buat judul di kotak putih */
+h1{
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 8%;
+    font-size: 30px;
+}
+
+/* garis kecil di bawah judul */
+h1::after{
+    content: '';
+    background:lightblue;
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    border-radius: 3px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* kalimat quotesnya */
+.quote-box blockquote{
+    font-size: 24px;
+    min-height: 110px;
+    margin-bottom: 30px;
+}
+
+/* tanda kutip sblm & sesudah quote */
+.quote-box blockquote::before,.quote-box blockquote::after{
+    content: '"';
+}
+
+/* format authornya */
+.quote-box span{
+    float: center;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* garis kecil sblm nama author */
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: lightblue;
+    position: absolute;
+    top: 50%;
+    left: -25px;
+}
+
+/* garis kecil sesudah nama author */
+.quote-box span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: lightblue;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+}
+
+/* container buat next-quote-button */
+.button-row{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
