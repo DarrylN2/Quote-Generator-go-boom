@@ -9,7 +9,7 @@
 /* background colornya */
 body{
     background-image: url('background.gif.gif');
-    backgorund-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 2000px 1000px;
 }
 
