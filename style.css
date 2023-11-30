@@ -8,7 +8,9 @@
 
 /* background colornya */
 body{
-    background-image: url('![ezgif-4-5ffd8312b1](https://github.com/DarrylN2/Quote-Generator-go-boom/assets/150410808/5bcade50-5db3-4ce8-9e3f-242067fdc659') ;
+    background-image: url('background.gif.gif');
+    bcakgorund-repeat: no-repeat;
+    background-size: 2000px 1000px;
 }
 
 /* white box buat quotes-nya */
